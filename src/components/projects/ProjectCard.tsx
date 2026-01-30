@@ -1,4 +1,3 @@
-// components/ProjectCard.tsx
 import Image from "next/image";
 import {
   Card,
@@ -6,13 +5,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"; 
+} from "@/components/ui/card";
 
 interface Project {
   id: number;
   title: string;
   category: string;
-  description: string;
+  description?: string;          
   image: string;
   year?: string;
   tags?: string[];
@@ -20,7 +19,7 @@ interface Project {
 
 interface ProjectCardProps {
   project: Project;
-  priority?: boolean; 
+  priority?: boolean;
 }
 
 export function ProjectCard({ project, priority = false }: ProjectCardProps) {
@@ -32,7 +31,7 @@ export function ProjectCard({ project, priority = false }: ProjectCardProps) {
         border border-border bg-card text-card-foreground
       "
     >
-      
+      {/* Image */}
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
         <Image
           src={project.image}
@@ -55,9 +54,12 @@ export function ProjectCard({ project, priority = false }: ProjectCardProps) {
           </span>
         </div>
 
-        <CardDescription className="mt-1.5 line-clamp-2">
-          {project.description}
-        </CardDescription>
+        {/* Safely render description only if it exists */}
+        {project.description && (
+          <CardDescription className="mt-1.5 line-clamp-2">
+            {project.description}
+          </CardDescription>
+        )}
       </CardHeader>
 
       <CardContent className="pt-0">
@@ -74,7 +76,6 @@ export function ProjectCard({ project, priority = false }: ProjectCardProps) {
           </div>
         )}
       </CardContent>
-
     </Card>
   );
 }

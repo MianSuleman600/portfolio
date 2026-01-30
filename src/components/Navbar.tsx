@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
 interface NavbarProps {
-  variant?: 'default' | 'footer';  // ← new prop
+  variant?: 'default' | 'footer';
 }
 
 export const Navbar = ({ variant = 'default' }: NavbarProps) => {
@@ -35,7 +35,7 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  // Shared navigation links (used in both desktop and mobile)
+  // Shared navigation links (used in both desktop and mobile menus)
   const navLinks = (
     <>
       <Link
@@ -85,7 +85,7 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Desktop / Main bar */}
+        {/* Main bar / header row */}
         <div className="flex items-center justify-between h-16">
           {/* Logo – hidden in footer mode */}
           {!isFooter && (
@@ -99,19 +99,36 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
             </Link>
           )}
 
-          {/* Desktop links – hidden in footer mode */}
+          {/* Desktop navigation + CV button – hidden in footer mode */}
           {!isFooter && (
             <div className="hidden md:flex md:items-center md:space-x-10">
               {navLinks}
+
+              {/* Download CV – using shadcn Button with asChild pattern */}
               <Button
-                href="/cv.pdf"
-                text="Download CV"
-                className="ml-4 px-5 py-2 bg-black text-white hover:bg-gray-900 rounded-full text-sm font-medium shadow-sm transition-all"
-              />
+                asChild
+                className="
+                  ml-4 px-5 py-2 
+                  bg-black hover:bg-gray-900 
+                  text-white 
+                  rounded-full 
+                  text-sm font-medium 
+                  shadow-sm hover:shadow-md 
+                  transition-all duration-200
+                "
+              >
+                <a 
+                  href="/cv.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Download CV
+                </a>
+              </Button>
             </div>
           )}
 
-          {/* Mobile menu button – hidden in footer mode */}
+          {/* Mobile hamburger menu button – hidden in footer mode */}
           {!isFooter && (
             <div className="md:hidden">
               <button
@@ -132,7 +149,7 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
           )}
         </div>
 
-        {/* Mobile dropdown – only shown in default mode */}
+        {/* Mobile dropdown menu – only shown in default (non-footer) mode */}
         {!isFooter && (
           <div
             ref={menuRef}
@@ -142,19 +159,36 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
           >
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
               {navLinks}
+
               <div className="px-3 py-2">
+                {/* Download CV in mobile menu – same shadcn pattern */}
                 <Button
-                  href="/resume.pdf"
-                  text="Download CV"
-                  className="w-full px-6 py-3 bg-black text-white hover:bg-gray-900 rounded-full text-base font-medium shadow-sm transition-all"
-                />
+                  asChild
+                  className="
+                    w-full px-6 py-3 
+                    bg-black hover:bg-gray-900 
+                    text-white 
+                    rounded-full 
+                    text-base font-medium 
+                    shadow-sm hover:shadow-md 
+                    transition-all duration-200
+                  "
+                >
+                  <a 
+                    href="/cv.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Download CV
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
         )}
       </div>
 
-     
+      {/* Footer mode: only horizontal links (no logo, no button, no mobile menu) */}
       {isFooter && (
         <div className="hidden md:flex justify-center gap-6 md:gap-10 py-4 text-sm md:text-base">
           {navLinks}
