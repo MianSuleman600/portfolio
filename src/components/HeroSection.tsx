@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SocialIcons } from "./SocialIcons";
+import Link from "next/link";
 
 export const HeroSection = () => {
  
@@ -17,7 +18,7 @@ export const HeroSection = () => {
         bg-linear-to-br from-gray-50 to-gray-100
         dark:from-gray-900 dark:to-gray-950
         px-5 py-12 sm:px-6 md:px-12 lg:px-20
-        mt-6
+        mt-10
       "
     >
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -43,16 +44,19 @@ export const HeroSection = () => {
           </p>
 
           
-          <div className="flex flex-col sm:flex-row items-center sm:justify-center lg:justify-start gap-4 mt-6">
-            <Button
-              variant="default"
-              size="lg"
-              className="bg-orange-600 hover:bg-orange-700 text-white min-w-[180px]"
-            >
-             Contact Me
-            </Button>
-           
-          </div>
+       <div className="flex flex-col sm:flex-row items-center sm:justify-center lg:justify-start gap-4 mt-6">
+          <Button
+            asChild
+            variant="default"
+            size="lg"
+            className="bg-orange-600 hover:bg-black text-white min-w-[180px]"
+          >
+            <Link href="/#contact">
+              Contact Me
+            </Link>
+          </Button>
+        </div>
+
            
 
         </div>
