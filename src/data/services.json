@@ -1,22 +1,22 @@
 [
   {
     "title": "UI/UX Design",
-    "description": "User-centered interface design focused on usability, accessibility, and conversion optimization to create engaging digital experiences.",
-    "icon": "ui-ux"
+    "description": "User-centered interfaces focused on usability and conversion.",
+    "icon": "PaintBucket"
   },
   {
-    "title": "Web Design & Development",
-    "description": "Modern, responsive websites built with performance, SEO, and scalability in mind using the latest web technologies.",
-    "icon": "web-design"
+    "title": "Web Development",
+    "description": "Modern responsive websites using latest technologies.",
+    "icon": "Laptop"
   },
   {
     "title": "Mobile App Design",
-    "description": "Intuitive mobile app interfaces designed for iOS and Android with a focus on smooth user flows and clean visual hierarchy.",
-    "icon": "app-design"
+    "description": "Intuitive mobile app interfaces for iOS & Android.",
+    "icon": "Smartphone"
   },
   {
     "title": "Graphic & Brand Design",
-    "description": "Professional branding, marketing visuals, and design systems that ensure consistent and memorable brand identity.",
-    "icon": "graphic-design"
+    "description": "Professional branding and marketing visuals.",
+    "icon": "PenTool"
   }
 ]
