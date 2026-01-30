@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "quote": "Suleman delivered an exceptional landing page that not only looks stunning but also converted 40% better than our previous version. His attention to UI/UX details is unmatched.",
+    "name": "Ahmed Khan",
+    "role": "Founder & CEO, TechNova Solutions",
+    "avatar": "/testimonials/ahmed-khan.jpeg"
+  },
+  {
+    "id": 2,
+    "quote": "Working with Suleman was a breeze. He understood our brand vision instantly and turned it into a clean, modern mobile app interface that our users love.",
+    "name": "Sara Malik",
+    "role": "Product Manager, FinEase",
+    "avatar": "/testimonials/sara-malik.jpeg"
+  },
+  {
+    "id": 3,
+    "quote": "The branding package Suleman created for our startup was a game-changer. Professional, cohesive, and exactly what we needed to stand out in a crowded market.",
+    "name": "Omar Farooq",
+    "role": "Creative Director, NovaWear",
+    "avatar": "/testimonials/omar-farooq.jpeg"
+  },
+  {
+    "id": 4,
+    "quote": "Suleman transformed our outdated dashboard into something intuitive and beautiful. Clients now actually enjoy using our analytics tool — huge win!",
+    "name": "Ayesha Rehman",
+    "role": "CTO, DataPulse Analytics",
+    "avatar": "/testimonials/ayesha-rehman.jpeg"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "AirCalling Landing Page Design",
+    "category": "Web Design",
+    "description": "Modern landing page for a SaaS communication tool with high conversion focus.",
+    "image": "/projects/aircalling.jpeg",
+    "year": "2025",
+    "tags": ["Landing Page", "SaaS", "Figma"]
+  },
+  {
+    "id": 2,
+    "title": "Business Growth Dashboard",
+    "category": "Web Design",
+    "description": "Clean and professional business landing page with growth-oriented design.",
+    "image": "/projects/business-landing.jpeg",
+    "year": "2025",
+    "tags": ["Corporate", "Conversion", "Next.js"]
+  },
+  {
+    "id": 3,
+    "title": "E-Commerce Fashion Store",
+    "category": "Web Design",
+    "description": "Modern e-commerce product showcase with seamless shopping experience.",
+    "image": "/projects/ecom-page.jpeg",
+    "year": "2024",
+    "tags": ["E-commerce", "Tailwind", "Shopping"]
+  },
+  {
+    "id": 4,
+    "title": "Fintech Mobile Banking App",
+    "category": "App Design",
+    "description": "Intuitive mobile banking interface with secure and modern UX patterns.",
+    "image": "/projects/banking-app.jpeg",
+    "year": "2025",
+    "tags": ["Mobile", "Fintech", "UI/UX"]
+  },
+  {
+    "id": 5,
+    "title": "Analytics Dashboard Redesign",
+    "category": "UI/UX",
+    "description": "Data-rich dashboard with improved information hierarchy and user flow.",
+    "image": "/projects/dashboard-ui.jpeg",
+    "year": "2025",
+    "tags": ["Dashboard", "Data Visualization", "React"]
+  },
+  {
+    "id": 6,
+    "title": "Tech Startup Brand Identity",
+    "category": "Graphic Design",
+    "description": "Complete brand identity package including logo, colors, and guidelines.",
+    "image": "/projects/brand-kit.jpeg",
+    "year": "2024",
+    "tags": ["Branding", "Logo Design", "Illustrator"]
+  }
+]
