@@ -35,7 +35,7 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  // Shared navigation links (used in both desktop and mobile menus)
+  // Shared navigation links
   const navLinks = (
     <>
       <Link
@@ -85,9 +85,9 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main bar / header row */}
+        {/* Main header row */}
         <div className="flex items-center justify-between h-16">
-          {/* Logo – hidden in footer mode */}
+          {/* Logo – only in default mode */}
           {!isFooter && (
             <Link href="/" className="flex-shrink-0">
               <span
@@ -99,19 +99,18 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
             </Link>
           )}
 
-          {/* Desktop navigation + CV button – hidden in footer mode */}
+          {/* Desktop nav + CV button – only in default mode */}
           {!isFooter && (
             <div className="hidden md:flex md:items-center md:space-x-10">
               {navLinks}
 
-              {/* Download CV – using shadcn Button with asChild pattern */}
               <Button
                 asChild
                 className="
                   ml-4 px-5 py-2 
-                  bg-black hover:bg-gray-900 
+                  bg-yellow-600 hover:bg-gray-900 
                   text-white 
-                  rounded-full 
+                  rounded-2xl 
                   text-sm font-medium 
                   shadow-sm hover:shadow-md 
                   transition-all duration-200
@@ -128,7 +127,7 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
             </div>
           )}
 
-          {/* Mobile hamburger menu button – hidden in footer mode */}
+          {/* Hamburger button – only in default mode */}
           {!isFooter && (
             <div className="md:hidden">
               <button
@@ -149,7 +148,7 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
           )}
         </div>
 
-        {/* Mobile dropdown menu – only shown in default (non-footer) mode */}
+        {/* Mobile dropdown – ONLY in default mode */}
         {!isFooter && (
           <div
             ref={menuRef}
@@ -157,11 +156,10 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
               isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+            <div className="px-2  flex flex-col pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
               {navLinks}
 
               <div className="px-3 py-2">
-                {/* Download CV in mobile menu – same shadcn pattern */}
                 <Button
                   asChild
                   className="
@@ -186,13 +184,14 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
             </div>
           </div>
         )}
-      </div>
 
-      {isFooter && (
-        <div className="hidden md:flex justify-center gap-6 md:gap-10 py-4 text-sm md:text-base">
-          {navLinks}
-        </div>
-      )}
+        {/* Footer mode: show links always (stacked on mobile, row on desktop) */}
+        {isFooter && (
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-10 py-6 text-base">
+            {navLinks}
+          </div>
+        )}
+      </div>
     </nav>
   );
 };
