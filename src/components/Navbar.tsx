@@ -166,7 +166,7 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
                   asChild
                   className="
                     w-full px-6 py-3 
-                    bg-black hover:bg-gray-900 
+                    bg-yellow-600 hover:bg-gray-900 
                     text-white 
                     rounded-full 
                     text-base font-medium 
@@ -188,7 +188,6 @@ export const Navbar = ({ variant = 'default' }: NavbarProps) => {
         )}
       </div>
 
-      {/* Footer mode: only horizontal links (no logo, no button, no mobile menu) */}
       {isFooter && (
         <div className="hidden md:flex justify-center gap-6 md:gap-10 py-4 text-sm md:text-base">
           {navLinks}
