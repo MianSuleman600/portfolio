@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from '@/components/ui/button';
 
 interface NavbarProps {
   variant?: 'default' | 'footer';  // ← new prop
