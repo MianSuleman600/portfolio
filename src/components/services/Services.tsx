@@ -33,7 +33,7 @@ const iconMap: Record<Service["icon"], ReactNode> = {
 
 export function Services() {
   return (
-    <section className="w-full py-16 md:py-20 lg:py-24 bg-white dark:bg-gray-950">
+    <section id="services" className="w-full py-16 md:py-20 lg:py-24 bg-white dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">

@@ -55,6 +55,13 @@ export const Navbar = ({ variant = "default" }: NavbarProps) => {
       <Link href="/#about" onClick={closeMenu} className="mobile-nav-link">
         About
       </Link>
+      <Link href="/#services" onClick={closeMenu} className="mobile-nav-link">
+        Services
+
+
+      
+      </Link>
+
       <Link href="/#projects" onClick={closeMenu} className="mobile-nav-link">
         Projects
       </Link>
